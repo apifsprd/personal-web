@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "name": "Home",
+      "url": "/",
+      "slug": "home"
+    },
+    {
+      "name": "About",
+      "url": "/about",
+      "slug": "about"
+    },
+    {
+      "name": "Work Experiences",
+      "url": "/work-experience",
+      "slug": "work-experience"
+    },
+    {
+      "name": "Blogs",
+      "url": "/blogs",
+      "slug": "blogs"
+    }
+  ]
+}

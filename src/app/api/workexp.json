@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 5,
+      "company": "Universitas Islam Internasional Indonesia (UIII)",
+      "position": "Mobile App Developer",
+      "description_id": "- Mengembangkan dan memelihara aplikasi mobile berbasis Android/iOS menggunakan framework atau bahasa pemrograman React Native \n - Berkolaborasi dengan tim backend untuk mengintegrasikan API dan memastikan sinkronisasi data antar platform. \n - Mengidentifikasi dan memperbaiki bug, serta mengoptimalkan performa aplikasi untuk memastikan stabilitas dan efisiensi.",
+      "description_en": " - Develop and maintain Android/iOS based mobile applications using React Native framework or programming language \n - Collaborate with the backend team to integrate APIs and ensure data synchronization between platforms. \n - Identify and fix bugs, and optimize application performance to ensure stability and efficiency.",
+      "date": "Jun 2024 - Present",
+      "work_length": "present",
+      "location_en": "Depok City, West Java",
+      "location_id": "Kota Depok, Jawa Barat"
+    },
+    {
+      "id": 4,
+      "company": "PT. Prima Rajuli Sukses",
+      "position": "Junior Programmer",
+      "description_id": "- Mengembangkan dan memelihara fitur pada aplikasi web menggunakan teknologi front-end (HTML, CSS, JavaScript) dan/atau back-end (ReactJS dan ExpressJS). \n - Melakukan pengujian dan debugging aplikasi untuk memastikan fungsionalitas berjalan dengan baik sesuai spesifikasi. \n - Menjadi penghubung antara stakeholder  untuk memastikan kebutuhan bisnis diimplementasikan secara teknis.",
+      "description_en": "- Develop and maintain features on web applications using front-end (HTML, CSS, JavaScript) and/or back-end (ReactJS and ExpressJS) technologies. \n - Perform testing and debugging of applications to ensure functionality runs well according to specifications. \n - Liaise between stakeholders to ensure business needs are implemented technically.",
+      "date": "Feb 2023 - Jun 2024",
+      "work_length": "1 year 6 months",
+      "location_en": "Tangerang, Banten",
+      "location_id": "Tangerang, Banten"
+    },
+    {
+      "id": 3,
+      "company": "PT. Adis Dimensions Indonesia",
+      "position": "Application Support",
+      "description_id": "- Memberikan dukungan teknis harian untuk memastikan aplikasi berfungsi dengan baik, termasuk menyelesaikan laporan error atau kendala pengguna. \n - Memonitor performa aplikasi dan berkolaborasi dengan tim pengembang untuk memperbaiki bug atau meningkatkan fitur yang ada. \n - Merancang dan memprioritaskan roadmap produk berdasarkan feedback pengguna, analisis kebutuhan bisnis, dan tren pasar. \n - Mengelola proses pengembangan proyek dari awal hingga akhir, memastikan tim bekerja sesuai dengan timeline dan target. \n - Melaporkan progres proyek dan memberikan rekomendasi kepada stakeholder untuk peningkatan produk dan layanan.",
+      "description_en": "- Provide daily technical support to ensure the app is functioning properly, including resolving any reported errors or user issues. \n - Monitor application performance and collaborate with the development team to fix bugs or enhance existing features. \n - Design and prioritize the product roadmap based on user feedback, business needs analysis, and market trends. \n - Manage the project development process from start to finish, ensuring the team works according to timelines and targets. \n - Report on project progress and provide recommendations to stakeholders for product and service improvements.",
+      "date": "Jul 2022 - Sep 2022",
+      "work_length": "3 months",
+      "location_en": "Tangerang, Banten",
+      "location_id": "Tangerang, Banten"
+    },
+    {
+      "id": 2,
+      "company": "PT. Passion Abadi Korpora",
+      "position": "Junior Web Programmer",
+      "description_id": "- Mengembangkan dan memelihara fitur pada aplikasi web menggunakan teknologi front-end (HTML, CSS, JavaScript) dan/atau back-end (CodeIgniter 3). \n - Membantu pengujian dan debugging aplikasi untuk memastikan fungsionalitas berjalan dengan baik sesuai spesifikasi. \n - Menjadi penghubung antara stakeholder untuk memastikan kebutuhan bisnis diimplementasikan secara teknis. \n - Berkolaborasi dengan tim senior untuk memahami kebutuhan proyek dan memberikan solusi teknis sederhana.",
+      "description_en": "- Develop and maintain features on web applications using front-end (HTML, CSS, JavaScript) and/or back-end (CodeIgniter 3) technologies. \n - Assist with testing and debugging of applications to ensure functionality runs properly according to specifications. \n - liaise between stakeholders to ensure business needs are implemented technically. \n - Collaborate with senior teams to understand project needs and provide simple technical solutions.",
+      "date": "Nov 2021 - Mar 2022",
+      "work_length": "5 months",
+      "location_en": "South Tangerang City, Banten",
+      "location_id": "Kota Tangerang Selatan, Banten"
+    },
+    {
+      "id": 1,
+      "company": "PT. L'Essential",
+      "position": "Junior Web Programmer",
+      "description_id": "- Mengembangkan dan memelihara fitur pada aplikasi web menggunakan teknologi front-end (HTML, CSS, JavaScript) dan/atau back-end (CodeIgniter 3). \n - Membantu pengujian dan debugging aplikasi untuk memastikan fungsionalitas berjalan dengan baik sesuai spesifikasi. \n - Menjadi penghubung antara stakeholder untuk memastikan kebutuhan bisnis diimplementasikan secara teknis. \n - Berkolaborasi dengan tim senior untuk memahami kebutuhan proyek dan memberikan solusi teknis sederhana.",
+      "description_en": "- Develop and maintain features on web applications using front-end (HTML, CSS, JavaScript) and/or back-end (CodeIgniter 3) technologies. \n - Assist with testing and debugging of applications to ensure functionality runs properly according to specifications. \n - liaise between stakeholders to ensure business needs are implemented technically. \n - Collaborate with senior teams to understand project needs and provide simple technical solutions.",
+      "date": "Dec 2020 - Feb 2021",
+      "work_length": "3 months",
+      "location_en": "South Tangerang City, Banten",
+      "location_id": "Kota Tangerang Selatan, Banten"
+    }
+  ]
+}
