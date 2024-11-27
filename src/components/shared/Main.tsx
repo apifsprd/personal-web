@@ -1,20 +1,20 @@
-'use client';
-import React from 'react';
+"use client";
+import React from "react";
 
-import HomeSection from '@/components/sections/HomeSection';
-import ProfileSection from '../sections/ProfileSection';
-import navs from '@/app/api/navs.json';
-import ButtonNav from '../ui/Buttons';
-import AboutSection from '../sections/AboutSection';
-import WorkExpSection from '../sections/WorkExpSection';
-import LoadingSection from '../sections/LoadingSection';
-import BlogsSection from '../sections/BlogsSection';
-import { Languages } from 'lucide-react';
+import HomeSection from "@/components/sections/HomeSection";
+import ProfileSection from "../sections/ProfileSection";
+import navs from "@/app/api/navs.json";
+import ButtonNav from "../ui/Buttons";
+import AboutSection from "../sections/AboutSection";
+import WorkExpSection from "../sections/WorkExpSection";
+import LoadingSection from "../sections/LoadingSection";
+import BlogsSection from "../sections/BlogsSection";
+import { Languages } from "lucide-react";
 
 function Main() {
   const navsData = navs.data;
-  const [selectedNav, setSelectedNav] = React.useState('home');
-  const [selectedLang, setSelectedLang] = React.useState('en');
+  const [selectedNav, setSelectedNav] = React.useState("home");
+  const [selectedLang, setSelectedLang] = React.useState("en");
   const [loading, setLoading] = React.useState(false);
 
   const handleClick = (slug: string) => {
@@ -33,12 +33,12 @@ function Main() {
   };
 
   return (
-    <main className="grid grid-cols-1 w-[100%] h-[100%] xs:grid-cols-1 xs:h-[100%] sm:grid-cols-1 sm:h-[100%] md:grid-cols-1 md:h-[100%] lg:grid-cols-3 lg:h-[90%] xl:grid-cols-3 xl:h-[90%]">
-      <div className="col-span-1 flex w-[100%] h-[100%] justify-center items-center">
+    <main className="w-full h-[97rem] flex flex-col xl:h-screen xl:flex-row">
+      <div className="w-full h-[40%] flex flex-col justify-center items-center xl:w-[30%] xl:h-full">
         <ProfileSection lang={selectedLang} />
       </div>
-      <div className="col-span-2 flex flex-col w-[100%] h-[100%] justify-center items-center ">
-        <div className="w-[100%] h-[10%] flex flex-col justify-center items-center lg:flex-row xl:flex-row">
+      <div className="w-full h-[60%] flex flex-col justify-center items-center xl:grow xl:h-full xl:pb-[10%]">
+        <div className="w-full h-[10%]  flex flex-row justify-start gap-4 items-center overflow-x-auto whitespace-nowrap xl:h-[10%] xl:justify-around">
           {navsData.map((nav: any) => (
             <ButtonNav
               key={nav.slug}
@@ -50,35 +50,29 @@ function Main() {
           ))}
           <div
             onClick={() =>
-              handleChangeLang(selectedLang === 'en' ? 'id' : 'en')
+              handleChangeLang(selectedLang === "en" ? "id" : "en")
             }
-            className="p-2 w-[9%] flex flex-row gap-3 justify-center items-center rounded-md cursor-pointer bg-gray-200 hover:bg-transparent"
+            className="px-4 py-2 mr-10 flex flex-row gap-2 justify-center items-center rounded-md cursor-pointer bg-gray-200 hover:bg-transparent"
           >
             <Languages size={24} color="black" />
             <p className="text-sm font-montserrat font-semibold">
-              {selectedLang === 'en' ? 'EN' : 'ID'}
+              {selectedLang === "en" ? "EN" : "ID"}
             </p>
           </div>
         </div>
-        <div className="w-[100%] h-[90%] flex flex-col justify-center items-center pb-[15%]">
-          <div className="w-[80%] h-full flex flex-col justify-center items-center">
-            {loading ? (
-              <LoadingSection />
-            ) : (
-              <>
-                {selectedNav === 'home' && <HomeSection lang={selectedLang} />}
-                {selectedNav === 'about' && (
-                  <AboutSection lang={selectedLang} />
-                )}
-                {selectedNav === 'work-experience' && (
-                  <WorkExpSection lang={selectedLang} />
-                )}
-                {selectedNav === 'blogs' && (
-                  <BlogsSection lang={selectedLang} />
-                )}
-              </>
-            )}
-          </div>
+        <div className="w-full h-[90%]  p-5 flex flex-col justify-center items-center xl:h-[90%] xl:p-0">
+          {loading ? (
+            <LoadingSection />
+          ) : (
+            <>
+              {selectedNav === "home" && <HomeSection lang={selectedLang} />}
+              {selectedNav === "about" && <AboutSection lang={selectedLang} />}
+              {selectedNav === "work-experience" && (
+                <WorkExpSection lang={selectedLang} />
+              )}
+              {selectedNav === "blogs" && <BlogsSection lang={selectedLang} />}
+            </>
+          )}
         </div>
       </div>
     </main>

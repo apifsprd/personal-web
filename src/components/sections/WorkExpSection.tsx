@@ -1,9 +1,9 @@
-import React from 'react';
-import SectionTemplate from '../shared/SectionTemplate';
-import { Dot } from 'lucide-react';
+import React from "react";
+import SectionTemplate from "../shared/SectionTemplate";
+import { Dot } from "lucide-react";
 
-import workExperiences from '@/app/api/workexp.json';
-import LoadingSection from './LoadingSection';
+import workExperiences from "@/app/api/workexp.json";
+import LoadingSection from "./LoadingSection";
 
 function WorkExpSection(props: { lang: string }) {
   const [workExpData, setWorkExpData] = React.useState(workExperiences.data);
@@ -22,12 +22,12 @@ function WorkExpSection(props: { lang: string }) {
   return (
     <SectionTemplate>
       <p className="text-2xl font-montserrat text-sky-300 font-semibold">
-        {props.lang === 'en'
-          ? 'Where I’ve Worked'
-          : 'Di mana saya telah bekerja'}
+        {props.lang === "en"
+          ? "Where I’ve Worked"
+          : "Di mana saya telah bekerja"}
       </p>
-      <div className="w-full h-[50%] grid grid-cols-3 justify-center items-center gap-5">
-        <div className="col-span-1 h-full flex flex-col justify-start items-start gap-5">
+      <div className="w-full h-auto grid grid-cols-1 justify-center items-center gap-5 xl:grid-cols-3 xl:gap-8">
+        <div className="h-full flex flex-row justify-start items-start gap-5 overflow-x-auto whitespace-nowrap xl:flex-col xl:overflow-x-visible xl:whitespace-normal">
           {workExpData.map((workExp: any, index) => (
             <a
               href={`#${workExp.id}`}
@@ -37,16 +37,16 @@ function WorkExpSection(props: { lang: string }) {
             >
               <div className="flex flex-col">
                 <p
-                  className={`font-montserrat text-lg  ${
+                  className={`font-montserrat text-md  ${
                     selectedItem === workExp.id
-                      ? 'underline underline-offset-4 font-semibold'
-                      : ''
+                      ? "underline underline-offset-4 font-semibold"
+                      : ""
                   }`}
                 >
                   {workExp.company}
                 </p>
                 <p className="font-montserrat text-base font-normal text-gray-400">
-                  {props.lang === 'en'
+                  {props.lang === "en"
                     ? workExp.location_en
                     : workExp.location_id}
                 </p>
@@ -54,20 +54,20 @@ function WorkExpSection(props: { lang: string }) {
             </a>
           ))}
         </div>
-        <div className="col-span-2 h-full flex flex-col justify-start items-start gap-3">
+        <div className="h-full flex flex-col justify-start items-start gap-5 xl:col-span-2">
           {loading ? (
             <LoadingSection />
           ) : (
             <>
               <div className="flex flex-col justify-start items-start gap-0">
-                <p className="font-montserrat text-2xl font-semibold">
+                <p className="font-montserrat text-xl font-semibold">
                   {
                     workExpData.find((item) => item.id === selectedItem)
                       ?.position
                   }
                 </p>
-                <p className="font-montserrat text-lg font-normal text-gray-400">
-                  @{' '}
+                <p className="font-montserrat text-md font-normal text-gray-400">
+                  @{" "}
                   {
                     workExpData.find((item) => item.id === selectedItem)
                       ?.company
@@ -75,24 +75,40 @@ function WorkExpSection(props: { lang: string }) {
                 </p>
               </div>
               <div className="flex flex-row justify-start items-center gap-2">
-                <p className="font-lora text-lg font-normal">
+                <p className="font-lora text-sm font-normal">
                   {workExpData.find((item) => item.id === selectedItem)?.date}
                 </p>
                 <Dot color="lightgray" size={18} />
-                <p className="font-lora text-lg font-normal text-gray-400">
+                <p className="font-lora text-sm font-normal text-gray-400">
                   {
                     workExpData.find((item) => item.id === selectedItem)
                       ?.work_length
                   }
                 </p>
               </div>
-              <p className="font-hind text-lg font-normal whitespace-pre-line leading-relaxed">
-                {props.lang === 'en'
-                  ? workExpData.find((item) => item.id === selectedItem)
-                      ?.description_en
-                  : workExpData.find((item) => item.id === selectedItem)
-                      ?.description_id}
-              </p>
+              <ol className="flex flex-col justify-start items-start gap-1">
+                {props.lang === "en"
+                  ? workExpData
+                      .find((item) => item.id === selectedItem)
+                      ?.desc_items_en.map((item: string, index: number) => (
+                        <li key={index} className="flex flex-row gap-2">
+                          <p>&#8226;</p>
+                          <p className="font-normal text-base font-hind">
+                            {item}
+                          </p>
+                        </li>
+                      ))
+                  : workExpData
+                      .find((item) => item.id === selectedItem)
+                      ?.desc_items_id.map((item: string, index: number) => (
+                        <li key={index} className="flex flex-row gap-2">
+                          <p>&#8226;</p>
+                          <p className="font-normal text-base font-hind">
+                            {item}
+                          </p>
+                        </li>
+                      ))}
+              </ol>
             </>
           )}
         </div>

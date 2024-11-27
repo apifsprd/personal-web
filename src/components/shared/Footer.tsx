@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 function Footer() {
   return (
-    <footer className="w-[100%] h-[5%] flex justify-center items-center">
+    <footer className="w-full h-[3rem] flex justify-center items-center">
       <p className="text-sm font-montserrat text-gray-600">
         &copy; {new Date().getFullYear()} Apif Supriadi
       </p>
