@@ -1,7 +1,5 @@
 import React from "react";
-import SectionTemplate from "../shared/SectionTemplate";
 import { Dot } from "lucide-react";
-
 import workExperiences from "@/app/api/workexp.json";
 import LoadingSection from "./LoadingSection";
 
@@ -20,7 +18,7 @@ function WorkExpSection(props: { lang: string }) {
   };
 
   return (
-    <SectionTemplate>
+    <div>
       <p className="text-2xl font-montserrat text-sky-300 font-semibold">
         {props.lang === "en"
           ? "Where I’ve Worked"
@@ -37,7 +35,7 @@ function WorkExpSection(props: { lang: string }) {
             >
               <div className="flex flex-col">
                 <p
-                  className={`font-montserrat text-md  ${
+                  className={`font-montserrat text-base  ${
                     selectedItem === workExp.id
                       ? "underline underline-offset-4 font-semibold"
                       : ""
@@ -60,13 +58,13 @@ function WorkExpSection(props: { lang: string }) {
           ) : (
             <>
               <div className="flex flex-col justify-start items-start gap-0">
-                <p className="font-montserrat text-xl font-semibold">
+                <p className="font-montserrat text-lg font-semibold">
                   {
                     workExpData.find((item) => item.id === selectedItem)
                       ?.position
                   }
                 </p>
-                <p className="font-montserrat text-md font-normal text-gray-400">
+                <p className="font-montserrat text-base font-normal text-gray-400">
                   @{" "}
                   {
                     workExpData.find((item) => item.id === selectedItem)
@@ -75,11 +73,11 @@ function WorkExpSection(props: { lang: string }) {
                 </p>
               </div>
               <div className="flex flex-row justify-start items-center gap-2">
-                <p className="font-lora text-sm font-normal">
+                <p className="font-hind text-sm font-normal">
                   {workExpData.find((item) => item.id === selectedItem)?.date}
                 </p>
                 <Dot color="lightgray" size={18} />
-                <p className="font-lora text-sm font-normal text-gray-400">
+                <p className="font-hind text-sm font-normal text-gray-400">
                   {
                     workExpData.find((item) => item.id === selectedItem)
                       ?.work_length
@@ -113,7 +111,7 @@ function WorkExpSection(props: { lang: string }) {
           )}
         </div>
       </div>
-    </SectionTemplate>
+    </div>
   );
 }
 

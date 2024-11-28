@@ -1,10 +1,17 @@
 {
-  "data": [
+  "nav": [
     {
       "name": "Home",
       "url": "/",
       "slug": "home"
     },
+    {
+      "name": "About",
+      "url": "/",
+      "slug": "about"
+    }
+  ],
+  "subnav": [
     {
       "name": "About",
       "url": "/about",
@@ -14,11 +21,6 @@
       "name": "Work Experiences",
       "url": "/work-experience",
       "slug": "work-experience"
-    },
-    {
-      "name": "Blogs",
-      "url": "/blogs",
-      "slug": "blogs"
     }
   ]
 }
