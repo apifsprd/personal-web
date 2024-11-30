@@ -69,7 +69,7 @@ const Post = (props: Props) => {
       <p className="mt-[2rem] text-sm font-semibold font-hind text-black">
         {props.lang === "en" ? "Tags:" : "Tag:"}
       </p>
-      <div className="w-full h-auto flex flex-row justify-start items-center gap-3">
+      <div className="w-full h-auto flex flex-row flex-wrap justify-start items-center gap-3">
         {post?.tags.map((source: any, index: number) => (
           <p
             key={index}
@@ -82,7 +82,7 @@ const Post = (props: Props) => {
       <p className="text-sm font-semibold font-hind text-black">
         {props.lang === "en" ? "Sources:" : "Sumber:"}
       </p>
-      <div className="w-full h-auto flex flex-row justify-start items-center gap-3">
+      <div className="w-full h-auto flex flex-row justify-start items-center gap-3 flex-wrap">
         {post?.sources.map((source: any, index: number) => (
           <a
             href={source.url}
