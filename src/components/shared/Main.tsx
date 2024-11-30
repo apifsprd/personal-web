@@ -31,9 +31,9 @@ function Main() {
 
   return (
     <div className="w-full h-screen flex flex-col justify-start items-center">
-      <div className="w-full h-[10%] flex flex-col justify-center items-center xl:mt-[1%]">
+      <div className="w-full h-[10%] flex flex-col justify-center items-center">
         <div className="w-full h-[60%] flex justify-center items-center">
-          <a href="#" className="text-2xl font-montserrat font-bold italic ">
+          <a href="#" className="text-xl font-montserrat font-bold italic ">
             Apif
           </a>
         </div>
