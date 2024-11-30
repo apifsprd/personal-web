@@ -54,7 +54,7 @@ function Main() {
             className="w-[3rem] py-2 mr-10 flex flex-row gap-2 justify-center items-center rounded-md cursor-pointer  hover:bg-transparent"
           >
             <Languages size={50} color="black" />
-            <p className="text-base font-montserrat font-semibold">
+            <p className="text-base font-montserrat font-semibold  text-black">
               {selectedLang === "en" ? "EN" : "ID"}
             </p>
           </div>

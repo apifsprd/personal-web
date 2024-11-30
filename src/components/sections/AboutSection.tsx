@@ -19,8 +19,10 @@ function AboutSection(props: { lang: string }) {
             />
           </div>
           <div className="flex flex-col justify-center items-center gap-2">
-            <p className="text-2xl font-bold font-montserrat">APIF SUPRIADI</p>
-            <p className="font-montserrat text-md">
+            <p className="text-2xl font-bold font-montserrat text-black">
+              APIF SUPRIADI
+            </p>
+            <p className="font-montserrat text-base  text-black">
               {props.lang === "en"
                 ? "Software Developer"
                 : "Pengembang Aplikasi"}
@@ -50,7 +52,7 @@ function AboutSection(props: { lang: string }) {
             </div>
           </div>
         </div>
-        <p className="text-md font-montserrat leading-loose">
+        <p className="text-base font-montserrat leading-loose text-black">
           {props.lang === "en"
             ? "Hi, Nice to meet you! I’m a passionate developer from Indonesia, currently working as a mobile app developer at "
             : "Halo, Senang bertemu kamu! Saya adalah seorang pengembang aplikasi asal Indonesia, saat ini bekerja sebagai pengembang aplikasi seluler di "}{" "}
@@ -79,7 +81,7 @@ function AboutSection(props: { lang: string }) {
             : "tempat saya mengembangkan fondasi yang kuat dalam teknologi dan pemecahan masalah"}
           .
         </p>
-        <p className="text-md font-montserrat leading-loose">
+        <p className="text-base font-montserrat leading-loose text-black">
           {props.lang === "en"
             ? "I thrive on learning new things and always enjoy exploring the latest trends and techniques in the tech world. Beyond coding, I am a reader and a big fan of football. Whether it's diving into a good book or watching an exciting match, I believe in staying curious and inspired. My goal is to keep growing as a engineer and contribute meaningfully to every project I work on."
             : "Saya sangat senang mempelajari hal-hal baru dan selalu menikmati menjelajahi tren dan teknik terbaru di dunia teknologi. Selain coding, saya adalah seorang pembaca dan penggemar berat sepak bola. Entah itu membaca buku yang bagus atau menonton pertandingan yang menarik, saya percaya bahwa saya akan selalu ingin tahu dan terinspirasi. Tujuan saya adalah untuk terus berkembang sebagai seorang engineer dan berkontribusi secara bermakna pada setiap proyek yang saya kerjakan."}

@@ -18,7 +18,9 @@ function BlogsSection(props: { lang: string }) {
               onClick={() => setSelectedPost(blog.slug)}
             >
               <div className="w-[75%] flex flex-col justify-center items-start gap-1">
-                <p className="text-md font-semibold font-lora">{blog.title}</p>
+                <p className="text-md font-semibold font-lora text-black">
+                  {blog.title}
+                </p>
                 <div className="flex flex-row justify-start items-center gap-1 flex-wrap">
                   <p className="text-sm font-hind text-gray-500">
                     {blog.category}

@@ -11,7 +11,7 @@ function LoadingSection() {
         height={80}
         unoptimized
       />
-      <p className="text-sm font-montserrat">Loading ...</p>
+      <p className="text-sm font-montserrat  text-black">Loading ...</p>
     </div>
   );
 }

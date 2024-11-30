@@ -35,7 +35,7 @@ function WorkExpSection(props: { lang: string }) {
             >
               <div className="flex flex-col">
                 <p
-                  className={`font-montserrat text-base  ${
+                  className={`font-montserrat text-base  text-black  ${
                     selectedItem === workExp.id
                       ? "underline underline-offset-4 font-semibold"
                       : ""
@@ -58,13 +58,13 @@ function WorkExpSection(props: { lang: string }) {
           ) : (
             <>
               <div className="flex flex-col justify-start items-start gap-0">
-                <p className="font-montserrat text-xl font-semibold">
+                <p className="font-montserrat text-lg font-semibold  text-black">
                   {
                     workExpData.find((item) => item.id === selectedItem)
                       ?.position
                   }
                 </p>
-                <p className="font-montserrat text-lg font-normal text-gray-400">
+                <p className="font-montserrat text-base font-normal text-gray-400">
                   @{" "}
                   {
                     workExpData.find((item) => item.id === selectedItem)
@@ -73,11 +73,11 @@ function WorkExpSection(props: { lang: string }) {
                 </p>
               </div>
               <div className="flex flex-row justify-start items-center gap-2">
-                <p className="font-montserrat text-base font-normal">
+                <p className="font-montserrat text-base font-normal  text-black">
                   {workExpData.find((item) => item.id === selectedItem)?.date}
                 </p>
                 <Dot color="lightgray" size={18} />
-                <p className="font-montserrat text-base font-normal text-gray-400">
+                <p className="font-montserrat text-base font-normal  text-gray-400">
                   {
                     workExpData.find((item) => item.id === selectedItem)
                       ?.work_length
@@ -91,7 +91,7 @@ function WorkExpSection(props: { lang: string }) {
                       ?.desc_items_en.map((item: string, index: number) => (
                         <li key={index} className="flex flex-row gap-2">
                           <p>&#8226;</p>
-                          <p className="font-normal text-md font-montserrat">
+                          <p className="font-normal text-base font-montserrat  text-black">
                             {item}
                           </p>
                         </li>
@@ -101,7 +101,7 @@ function WorkExpSection(props: { lang: string }) {
                       ?.desc_items_id.map((item: string, index: number) => (
                         <li key={index} className="flex flex-row gap-2">
                           <p>&#8226;</p>
-                          <p className="font-normal text-md font-montserrat">
+                          <p className="font-normal text-base font-montserrat  text-black">
                             {item}
                           </p>
                         </li>

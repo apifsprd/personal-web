@@ -11,8 +11,12 @@ const Post = (props: Props) => {
       <p className="text-md font-bold font-montserrat text-sky-400">
         {post?.category}
       </p>
-      <p className="text-2xl font-semibold font-lora">{post?.title}</p>
-      <p className="text-md font-normal font-lora">{post?.subtitle}</p>
+      <p className="text-2xl font-semibold font-lora  text-black">
+        {post?.title}
+      </p>
+      <p className="text-md font-normal font-lora  text-black">
+        {post?.subtitle}
+      </p>
       <div className="my-2 flex flex-row justify-start items-center gap-3 flex-wrap">
         <Image
           src={post?.author?.avatar || ""}
@@ -23,7 +27,7 @@ const Post = (props: Props) => {
           // layout="responsive"
         />
         <div className="flex flex-col justify-center items-start">
-          <p className="text-md font-hind">{post?.author.name}</p>
+          <p className="text-md font-hind  text-black">{post?.author.name}</p>
           <p className="text-sm font-hind text-gray-500">{post?.date}</p>
         </div>
       </div>
@@ -42,7 +46,7 @@ const Post = (props: Props) => {
         content.type === "paragraph" || content.type === "subheading" ? (
           <p
             key={index}
-            className={`text-base font-lora leading-relaxed whitespace-normal my-1 ${
+            className={`text-base font-lora leading-relaxed whitespace-normal my-1  text-black ${
               content.type === "subheading" ? "font-semibold" : ""
             }`}
           >
@@ -50,7 +54,6 @@ const Post = (props: Props) => {
           </p>
         ) : (
           <>
-            {" "}
             <Image
               key={index}
               src={`${content.value}` || ""}
