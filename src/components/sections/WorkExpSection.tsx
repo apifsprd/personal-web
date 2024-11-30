@@ -19,13 +19,13 @@ function WorkExpSection(props: { lang: string }) {
 
   return (
     <div>
-      <p className="text-2xl font-montserrat text-sky-300 font-semibold">
+      <p className="text-2xl font-montserrat text-sky-300 font-semibold mb-4 ">
         {props.lang === "en"
           ? "Where I’ve Worked"
           : "Di mana saya telah bekerja"}
       </p>
-      <div className="w-full h-auto grid grid-cols-1 justify-center items-center gap-5 xl:grid-cols-3 xl:gap-8">
-        <div className="h-full flex flex-row justify-start items-start gap-5 overflow-x-auto whitespace-nowrap xl:flex-col xl:overflow-x-visible xl:whitespace-normal">
+      <div className="w-full h-auto grid grid-cols-1 justify-center items-center gap-5 lg:grid-cols-3 xl:grid-cols-3 xl:gap-8">
+        <div className="h-auto flex flex-row justify-start items-start gap-5 overflow-x-auto whitespace-nowrap lg:flex-col lg:overflow-x-visible lg:whitespace-normal  xl:flex-col xl:overflow-x-visible xl:whitespace-normal">
           {workExpData.map((workExp: any, index) => (
             <a
               href={`#${workExp.id}`}
@@ -52,19 +52,19 @@ function WorkExpSection(props: { lang: string }) {
             </a>
           ))}
         </div>
-        <div className="h-full flex flex-col justify-start items-start gap-5 xl:col-span-2">
+        <div className="h-full flex flex-col justify-start items-start gap-5 lg:col-span-2 xl:col-span-2">
           {loading ? (
             <LoadingSection />
           ) : (
             <>
               <div className="flex flex-col justify-start items-start gap-0">
-                <p className="font-montserrat text-lg font-semibold">
+                <p className="font-montserrat text-xl font-semibold">
                   {
                     workExpData.find((item) => item.id === selectedItem)
                       ?.position
                   }
                 </p>
-                <p className="font-montserrat text-base font-normal text-gray-400">
+                <p className="font-montserrat text-lg font-normal text-gray-400">
                   @{" "}
                   {
                     workExpData.find((item) => item.id === selectedItem)
@@ -73,25 +73,25 @@ function WorkExpSection(props: { lang: string }) {
                 </p>
               </div>
               <div className="flex flex-row justify-start items-center gap-2">
-                <p className="font-hind text-sm font-normal">
+                <p className="font-montserrat text-base font-normal">
                   {workExpData.find((item) => item.id === selectedItem)?.date}
                 </p>
                 <Dot color="lightgray" size={18} />
-                <p className="font-hind text-sm font-normal text-gray-400">
+                <p className="font-montserrat text-base font-normal text-gray-400">
                   {
                     workExpData.find((item) => item.id === selectedItem)
                       ?.work_length
                   }
                 </p>
               </div>
-              <ol className="flex flex-col justify-start items-start gap-1">
+              <ol className="flex flex-col justify-start items-start gap-3">
                 {props.lang === "en"
                   ? workExpData
                       .find((item) => item.id === selectedItem)
                       ?.desc_items_en.map((item: string, index: number) => (
                         <li key={index} className="flex flex-row gap-2">
                           <p>&#8226;</p>
-                          <p className="font-normal text-base font-hind">
+                          <p className="font-normal text-md font-montserrat">
                             {item}
                           </p>
                         </li>
@@ -101,7 +101,7 @@ function WorkExpSection(props: { lang: string }) {
                       ?.desc_items_id.map((item: string, index: number) => (
                         <li key={index} className="flex flex-row gap-2">
                           <p>&#8226;</p>
-                          <p className="font-normal text-base font-hind">
+                          <p className="font-normal text-md font-montserrat">
                             {item}
                           </p>
                         </li>

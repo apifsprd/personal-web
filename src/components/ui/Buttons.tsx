@@ -11,7 +11,7 @@ function ButtonNav(props: any) {
       key={props.id}
     >
       <p
-        className={`text-md font-montserrat ${
+        className={`text-lg font-montserrat ${
           props.selected === props.id ? "font-bold" : ""
         }`}
       >

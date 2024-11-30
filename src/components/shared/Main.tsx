@@ -30,17 +30,14 @@ function Main() {
   };
 
   return (
-    <div className="w-full h-[100rem] flex flex-col justify-start items-center xl:h-screen">
-      <div className="w-full h-[5%] flex flex-col justify-center items-center xl:mt-[1%]">
-        <div className="w-full h-full flex justify-center items-center">
-          <a
-            href="#"
-            className="text-lg font-montserrat font-semibold uppercase"
-          >
-            Apif Supriadi
+    <div className="w-full h-screen flex flex-col justify-start items-center">
+      <div className="w-full h-[10%] flex flex-col justify-center items-center xl:mt-[1%]">
+        <div className="w-full h-[60%] flex justify-center items-center">
+          <a href="#" className="text-2xl font-montserrat font-bold italic ">
+            Apif
           </a>
         </div>
-        <div className="w-full h-full flex justify-center items-center gap-2 xl:gap-32">
+        <div className="w-full h-[40%] flex justify-around items-center xl:justify-center xl:gap-32">
           {navsData.map((nav: any) => (
             <ButtonNav
               key={nav.slug}
@@ -56,14 +53,14 @@ function Main() {
             }
             className="w-[3rem] py-2 mr-10 flex flex-row gap-2 justify-center items-center rounded-md cursor-pointer  hover:bg-transparent"
           >
-            <Languages size={24} color="black" />
-            <p className="text-sm font-montserrat font-semibold">
+            <Languages size={50} color="black" />
+            <p className="text-base font-montserrat font-semibold">
               {selectedLang === "en" ? "EN" : "ID"}
             </p>
           </div>
         </div>
       </div>
-      <div className="w-full h-[95%] flex flex-col justify-center items-center ">
+      <div className="w-full h-[90%] flex flex-col justify-start items-center">
         {loading ? (
           <LoadingSection />
         ) : (
