@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function LoadingSection() {
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center gap-2 xl:pt-0">
+    <div className="w-full h-[100%] flex flex-col justify-center items-center gap-2 xl:pt-0">
       <Image
         src="/gif/load-142.gif"
         alt="loading"

@@ -5,21 +5,23 @@ import blog_posts from "@/app/api/blogs.json";
 type Props = { lang: string; slug: string; eventBack: () => void };
 
 const Post = (props: Props) => {
-  const post = blog_posts.data.find((post: any) => post.slug === props.slug);
+  const selectedPost = blog_posts.data.find(
+    (post: any) => post.slug === props.slug
+  );
   return (
     <div className="w-full h-auto flex flex-col justify-center items-start gap-2">
       <p className="text-md font-bold font-montserrat text-sky-400">
-        {post?.category}
+        {selectedPost?.category}
       </p>
       <p className="text-2xl font-semibold font-lora  text-black">
-        {post?.title}
+        {selectedPost?.title}
       </p>
       <p className="text-md font-normal font-lora  text-black">
-        {post?.subtitle}
+        {selectedPost?.subtitle}
       </p>
       <div className="my-2 flex flex-row justify-start items-center gap-3 flex-wrap">
         <Image
-          src={post?.author?.avatar || ""}
+          src={selectedPost?.author?.avatar || ""}
           alt="photo-profile"
           width={50}
           height={50}
@@ -27,12 +29,16 @@ const Post = (props: Props) => {
           // layout="responsive"
         />
         <div className="flex flex-col justify-center items-start">
-          <p className="text-md font-hind  text-black">{post?.author.name}</p>
-          <p className="text-sm font-hind text-gray-500">{post?.date}</p>
+          <p className="text-md font-hind  text-black">
+            {selectedPost?.author.name}
+          </p>
+          <p className="text-sm font-hind text-gray-500">
+            {selectedPost?.date}
+          </p>
         </div>
       </div>
       <Image
-        src={post?.image.url || ""}
+        src={selectedPost?.image.url || ""}
         alt="photo-profile"
         width={50}
         height={50}
@@ -40,9 +46,9 @@ const Post = (props: Props) => {
         layout="responsive"
       />
       <p className="text-sm font-normal font-hind text-gray-400">
-        {post?.image.source.label}
+        {selectedPost?.image.source.label}
       </p>
-      {post?.contents.map((content: any, index: number) =>
+      {selectedPost?.contents.map((content: any, index: number) =>
         content.type === "paragraph" || content.type === "subheading" ? (
           <p
             key={index}
@@ -73,7 +79,7 @@ const Post = (props: Props) => {
         {props.lang === "en" ? "Tags:" : "Tag:"}
       </p>
       <div className="w-full h-auto flex flex-row flex-wrap justify-start items-center gap-3">
-        {post?.tags.map((source: any, index: number) => (
+        {selectedPost?.tags.map((source: any, index: number) => (
           <p
             key={index}
             className="text-sm font-normal font-montserrat text-black"
@@ -86,7 +92,7 @@ const Post = (props: Props) => {
         {props.lang === "en" ? "Sources:" : "Sumber:"}
       </p>
       <div className="w-full h-auto flex flex-row justify-start items-center gap-3 flex-wrap">
-        {post?.sources.map((source: any, index: number) => (
+        {selectedPost?.sources.map((source: any, index: number) => (
           <a
             href={source.url}
             target="_blank"
