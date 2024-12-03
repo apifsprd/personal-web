@@ -1,20 +1,14 @@
 import React from "react";
 import { Dot } from "lucide-react";
 import workExperiences from "@/app/api/workexp.json";
-import LoadingSection from "./LoadingSection";
 
 function WorkExpSection(props: { lang: string }) {
   const [workExpData] = React.useState(workExperiences.data);
-  const [loading, setLoading] = React.useState(false);
   const [selectedItem, setSelectedItem] = React.useState(
     workExperiences.data[0].id
   );
   const handleClick = (id: number) => {
-    setLoading(true);
     setSelectedItem(id);
-    setTimeout(() => {
-      setLoading(false);
-    }, 500);
   };
 
   return (
